@@ -33,6 +33,7 @@ git config user.email
 깃허브 원격지 리파지토리(저장소) 주소 추가 지정 origin(url)
 
 git remote add origin  https://github.com/bhwon1/react_cra_justshop.git 
+
 넣기
 
 원격지 리파지토리(저장소) 주소 확인하기 
@@ -81,4 +82,83 @@ git push origin master
 git add .
 git commit -m '리액트 Create-react-app 으로 저장한 저스트쇼핑몰 확장자 수정 jsx'
 git push origin master
+
+
+///////////////////////////////////////////////////////////
+배포하기 (페이징)
+
+1. 상단메뉴 Settiing 클릭 
+2. 좌측 중간 하단에 Pages 메뉴 클리 
+3. 우측에 GitHub Pages
+4. Branch
+GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository. Learn more.
+
+5. None 클릭 tp셀렉트 박스 열리면 
+  master 선택한다 
+  우측 save 클릭한다. 
+
+5. 새로고침 
+ctrl shift R
+캐시까지 삭제하는 새로고침 
+
+https://bhwon1.github.io/react_cra_justshop/
+
+30~1분 대기
+
+6. Depolyment => Github Pages
+
+중간아래 
+Github Pages 로 내려온다 
+
+
+Step 1: Add homepage to package.json
+/////////////////////////////////////////////
+package.json => 깃허브 배포주소 속성과 주소 찾기 
+/////////////////////////////////////////////
+
+포트폴리오 프로젝트 
+package.json 에디터에서 연다 
+
+맨 아래쪽에 추가한다.
+"homepage": "https://myusername.github.io/my-app"
+
+
+
+Step 2: Install gh-pages and add deploy to scripts in package.json
+/////////////////////////////////////////////
+gh-pages => npm i gh-pages 설치 (배포를 도와주는 것)
+            npm install --save gh-pages
+/////////////////////////////////////////////
+
+
+
+Step 3: Deploy the site by running npm run deploy
+/////////////////////////////////////////////
+npm run deploy
+/////////////////////////////////////////////
+
+
+
+
+ 빌드하기 
+npm run build
+
+
+
+//////////////////////////////////////////////////////////
+원본 소스만 올리기 
+
+기존 주소 삭제 
+git remote remove origin
+
+삭제한 주소 확인 
+git remote -v
+
+rltgjqm dn
+git remote add origin  https://github.com/bhwon1/just_shop_cra.git
+
+주소 들어간지 주소 확인
+git remote -v
+origin  https://github.com/bhwon1/just_shop_cra.git (fetch)
+origin  https://github.com/bhwon1/just_shop_cra.git (push)
 
